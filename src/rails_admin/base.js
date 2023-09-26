@@ -17,6 +17,7 @@ import "jquery-ui/ui/widget.js";
 import "jquery-ui/ui/widgets/menu.js";
 import "jquery-ui/ui/widgets/mouse.js";
 
+import "./abstract-select";
 import "./filter-box";
 import "./filtering-multiselect";
 import "./filtering-select";
@@ -26,4 +27,6 @@ import "./sidescroll";
 import "./ui";
 import "./widgets";
 
-Rails.start();
+if (!window._rails_loaded) {
+  Rails.start();
+}
